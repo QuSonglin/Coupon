@@ -348,7 +348,7 @@ class SellersInfo: UIViewController, pass_parameter2, UITableViewDelegate, UITab
 
         
         //(1）设置请求路径
-        let url:NSURL = NSURL(string:"http://192.168.204.83:1080/post_sellerInformation")!//不需要传递参数
+        let url:NSURL = NSURL(string: URLString + "/post_sellerInformation")!//不需要传递参数
      //   let url:NSURL = NSURL(string:"http://192.168.207.221:8000/post_sellerInformation")!//不需要传递参数
         //(2) 创建请求对象
         let request:NSMutableURLRequest = NSMutableURLRequest(url: url as URL) //默认为get请求

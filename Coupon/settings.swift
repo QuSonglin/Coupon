@@ -195,7 +195,8 @@ class settings: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
             do {
                 try fileManager.createDirectory(atPath: documentPath, withIntermediateDirectories: true, attributes: nil)
             }
-            catch let error {
+            //let error-> _
+            catch _ {
             }
             fileManager.createFile(atPath: documentPath.appendingFormat("/image.png"), contents: data, attributes: nil)
             //得到选择后沙盒中图片的完整路径

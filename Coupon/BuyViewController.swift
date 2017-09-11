@@ -45,7 +45,7 @@ class BuyViewController: UIViewController, SliderGalleryControllerDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
         
         let view = UIImageView(frame: CGRect(x:0, y:0, width: self.view.bounds.width - 40, height: (self.navigationController?.navigationBar.bounds.height)!/3*2))
         //view.tintColor = UIColor.white
@@ -279,7 +279,7 @@ class BuyViewController: UIViewController, SliderGalleryControllerDelegate, UITa
             print( URLString + "/static/" + picture!)
             cell.couponimg?.image = UIImage.image(fromURL: URLString + "/static/" + picture!, placeholder: UIImage()){_ in
             }
-            cell.border?.backgroundColor = UIColor.lightGray
+            cell.border?.backgroundColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
             cell.selectionStyle = UITableViewCellSelectionStyle.none
         }
         return cell

@@ -121,7 +121,7 @@ class Search: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITabl
                     self.presearchresult = []
                     let jsons = JSON(data!)
                     let jsoncount = jsons["result"].count
-                    if jsons["result"][0] == nil{
+                    if jsons["result"][0] == JSON.null{
                         
                     }else {
                         for i in 0 ..< jsoncount{

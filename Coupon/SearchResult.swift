@@ -104,7 +104,7 @@ class SearchResult: UIViewController, keyword, UITableViewDelegate, UITableViewD
                 //let str = NSString(data: data!,encoding:String.Encoding.utf8.rawValue)
                 let jsons = JSON(data!)
                 let jsoncount = jsons["coupon"].count
-                if jsons["coupon"][0] == nil{
+                if jsons["coupon"][0] == JSON.null{
                     let reminder = UILabel(frame: CGRect(x: self.view.bounds.width/10, y: self.view.bounds.height/2, width: self.view.bounds.width/5*4, height: self.view.bounds.height/18))
                     reminder.text = "未搜索到任何符合条件的优惠券"
                     reminder.tintColor = UIColor.gray

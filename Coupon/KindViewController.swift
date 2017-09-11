@@ -50,9 +50,6 @@ class KindViewController: UIViewController {
         kind1?.img?.image = UIImage(named: "生活百货")
         kind1?.kindname?.text = "生活百货"
         
-        
-        
-        
         kind2 = KindView(frame: CGRect(x: left + kindwidth + gap, y: top, width: kindwidth, height: kindheight))
         kind2?.img?.image = UIImage(named: "美妆妆饰")
         kind2?.kindname?.text = "美妆妆饰"

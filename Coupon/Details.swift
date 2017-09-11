@@ -341,7 +341,8 @@ class Details: UIViewController, Couponid {
 
  
         //(1）设置请求路径
-        let url:NSURL = NSURL(string:"http://192.168.204.83:1080/post_couponDetailForAndroid")!//不需要传递参数
+       // let url:NSURL = NSURL(string:"http://192.168.204.83:1080/post_couponDetailForAndroid")!//不需要传递参数
+        let url:NSURL = NSURL(string: URLString + "/post_couponDetailForAndroid")!//不需要传递参数
         
         //(2) 创建请求对象
         let request:NSMutableURLRequest = NSMutableURLRequest(url: url as URL) //默认为get请求
@@ -473,7 +474,7 @@ class Details: UIViewController, Couponid {
                     }
                     if(pic != nil){
                         print("商品图片:", pic!)
-                        self.productPic = "http://192.168.204.83:1080" + pic!
+                        self.productPic = URLString + "/" + pic!
                         
                         let url = URL(string: self.productPic)
                         //从网络获取数据流
@@ -488,7 +489,7 @@ class Details: UIViewController, Couponid {
                     }
                     if(selleravatar != nil){
                         print("卖家头像：", selleravatar!)
-                        self.sellerPic = "http://192.168.204.83:1080/static/" + selleravatar!
+                        self.sellerPic = URLString + "/static/" + selleravatar!
                         let url = URL(string: self.sellerPic)
                         let data = try! Data(contentsOf: url!)
                         self.img2 = UIImage(data: data)
@@ -558,7 +559,7 @@ class Details: UIViewController, Couponid {
         //print(password)
         
         //(1）设置请求路径
-        let url:NSURL = NSURL(string:"http://192.168.204.83:1080/post_likeCoupon")!//不需要传递参数
+        let url:NSURL = NSURL(string: URLString + "/post_likeCoupon")!//不需要传递参数
         
         //(2) 创建请求对象
         let request:NSMutableURLRequest = NSMutableURLRequest(url: url as URL) //默认为get请求
@@ -662,7 +663,7 @@ class Details: UIViewController, Couponid {
     }
     
     func couponid(id: String) {
-        user_id = id
+        self.cpId = id
     }
     
 }

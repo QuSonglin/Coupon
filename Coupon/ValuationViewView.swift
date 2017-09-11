@@ -192,9 +192,9 @@ class ValuationViewView: UIViewController, CouponInfo {
         request.httpMethod = "POST"
         var param: Dictionary<String,Any>  = [:]
         if sender.tag == 0{
-            param = ["userID":UID!, "brand":self.brand!,"category":self.category!,"expiredItme":self.expiredtime!,"lishPrice":self.listprice?.text!,"product":self.product!,"discount":self.discount!,"stat":"store","limit[]":self.limit!]
+            param = ["userID":UID!, "brand":self.brand!,"category":self.category!,"expiredItme":self.expiredtime!,"lishPrice":self.listprice!.text!,"product":self.product!,"discount":self.discount!,"stat":"store","limit[]":self.limit!]
         }else{
-            param = ["userID":UID!, "brand":self.brand!,"category":self.category!,"expiredItme":self.expiredtime!,"lishPrice":self.listprice?.text!,"product":self.product!,"discount":self.discount!,"stat":"store","limit[]":self.limit!]
+            param = ["userID":UID!, "brand":self.brand!,"category":self.category!,"expiredItme":self.expiredtime!,"lishPrice":self.listprice!.text!,"product":self.product!,"discount":self.discount!,"stat":"store","limit[]":self.limit!]
         }
         request.httpBody = jsonToData(jsonDic: param)
         let session = URLSession.shared

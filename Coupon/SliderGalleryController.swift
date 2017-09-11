@@ -70,7 +70,8 @@ class SliderGalleryController: UIViewController,UIScrollViewDelegate {
         //设置自动滚动计时器
         self.configureAutoScrollTimer()
         
-        self.view.backgroundColor = UIColor.black
+        //self.view.backgroundColor = UIColor.black
+        self.view.backgroundColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
         // Do any additional setup after loading the view.
     }
     
