@@ -65,7 +65,7 @@ class TabBarViewController: UITabBarController ,pass_parameter{
 
     func gotosell (_ tap: UITapGestureRecognizer) -> Void{
         let nextview = SellNavgationController()
-       // nextview.navigationBar.isHidden = true
+        nextview.navigationBar.isHidden = true
         self.present(nextview, animated: true, completion: nil)
     }
     
